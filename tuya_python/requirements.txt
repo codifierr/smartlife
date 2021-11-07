@@ -1,0 +1,4 @@
+tinytuya==1.2.10
+prometheus-client==0.12.0
+requests==2.26.0
+pyyaml==6.0
