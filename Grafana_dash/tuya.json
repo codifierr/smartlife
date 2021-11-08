@@ -229,7 +229,32 @@
                     },
                     "unit": "volt"
                 },
-                "overrides": []
+                "overrides": [
+                    {
+                        "__systemRef": "hideSeriesFrom",
+                        "matcher": {
+                            "id": "byNames",
+                            "options": {
+                                "mode": "exclude",
+                                "names": [
+                                    "AC Socket"
+                                ],
+                                "prefix": "All except:",
+                                "readOnly": true
+                            }
+                        },
+                        "properties": [
+                            {
+                                "id": "custom.hideFrom",
+                                "value": {
+                                    "legend": false,
+                                    "tooltip": false,
+                                    "viz": true
+                                }
+                            }
+                        ]
+                    }
+                ]
             },
             "gridPos": {
                 "h": 9,
@@ -246,10 +271,10 @@
                         "lastNotNull"
                     ],
                     "displayMode": "table",
-                    "placement": "right"
+                    "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "targets": [
@@ -337,7 +362,7 @@
                             }
                         ]
                     },
-                    "unit": "kwatt"
+                    "unit": "watt"
                 },
                 "overrides": []
             },
@@ -452,10 +477,10 @@
                         "lastNotNull"
                     ],
                     "displayMode": "table",
-                    "placement": "right"
+                    "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "pluginVersion": "8.1.1",
@@ -661,10 +686,10 @@
                         "lastNotNull"
                     ],
                     "displayMode": "table",
-                    "placement": "right"
+                    "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "pluginVersion": "8.1.1",
@@ -724,7 +749,7 @@
                 "x": 0,
                 "y": 75
             },
-            "id": 30,
+            "id": 31,
             "options": {
                 "orientation": "auto",
                 "reduceOptions": {
@@ -748,7 +773,7 @@
                     "refId": "A"
                 }
             ],
-            "title": "Current Amp",
+            "title": "Current Power",
             "transparent": true,
             "type": "gauge"
         },
@@ -804,7 +829,7 @@
                 "x": 8,
                 "y": 75
             },
-            "id": 28,
+            "id": 33,
             "options": {
                 "orientation": "auto",
                 "reduceOptions": {
@@ -963,7 +988,7 @@
                     "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "pluginVersion": "8.1.1",
@@ -1052,7 +1077,7 @@
                     "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "targets": [
@@ -1135,11 +1160,11 @@
                         "max",
                         "lastNotNull"
                     ],
-                    "displayMode": "list",
+                    "displayMode": "table",
                     "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "targets": [
@@ -1168,6 +1193,198 @@
             "panels": [],
             "title": "Living Room",
             "type": "row"
+        },
+        {
+            "datasource": null,
+            "description": "",
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "watt"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 8,
+                "x": 0,
+                "y": 105
+            },
+            "id": 30,
+            "options": {
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showThresholdLabels": false,
+                "showThresholdMarkers": true,
+                "text": {}
+            },
+            "pluginVersion": "8.1.1",
+            "targets": [
+                {
+                    "exemplar": true,
+                    "expr": "tuya_consumption_power{location=\"Living Room\"}",
+                    "interval": "",
+                    "legendFormat": "{{device_name}}",
+                    "refId": "A"
+                }
+            ],
+            "title": "Current Power",
+            "transparent": true,
+            "type": "gauge"
+        },
+        {
+            "datasource": null,
+            "description": "",
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "light-purple",
+                                "value": 150
+                            },
+                            {
+                                "color": "semi-dark-purple",
+                                "value": 170
+                            },
+                            {
+                                "color": "#EF843C",
+                                "value": 190
+                            },
+                            {
+                                "color": "#6ED0E0",
+                                "value": 210
+                            },
+                            {
+                                "color": "#EAB839",
+                                "value": 230
+                            },
+                            {
+                                "color": "red",
+                                "value": 250
+                            }
+                        ]
+                    },
+                    "unit": "volt"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 8,
+                "x": 8,
+                "y": 105
+            },
+            "id": 28,
+            "options": {
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showThresholdLabels": false,
+                "showThresholdMarkers": true,
+                "text": {}
+            },
+            "pluginVersion": "8.1.1",
+            "targets": [
+                {
+                    "exemplar": true,
+                    "expr": "tuya_consumption_voltage{location=\"Living Room\"}",
+                    "interval": "",
+                    "legendFormat": "{{device_name}}",
+                    "refId": "A"
+                }
+            ],
+            "title": "Current Voltage",
+            "transparent": true,
+            "type": "gauge"
+        },
+        {
+            "datasource": null,
+            "description": "",
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "amp"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 8,
+                "x": 16,
+                "y": 105
+            },
+            "id": 32,
+            "options": {
+                "orientation": "auto",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showThresholdLabels": false,
+                "showThresholdMarkers": true,
+                "text": {}
+            },
+            "pluginVersion": "8.1.1",
+            "targets": [
+                {
+                    "exemplar": true,
+                    "expr": "tuya_consumption_current{location=\"Living Room\"}",
+                    "interval": "",
+                    "legendFormat": "{{device_name}}",
+                    "refId": "A"
+                }
+            ],
+            "title": "Current Amp",
+            "transparent": true,
+            "type": "gauge"
         },
         {
             "datasource": null,
@@ -1230,7 +1447,7 @@
                 "h": 7,
                 "w": 8,
                 "x": 0,
-                "y": 105
+                "y": 113
             },
             "id": 12,
             "options": {
@@ -1240,11 +1457,11 @@
                         "min",
                         "lastNotNull"
                     ],
-                    "displayMode": "list",
+                    "displayMode": "table",
                     "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "pluginVersion": "8.1.1",
@@ -1319,7 +1536,7 @@
                 "h": 7,
                 "w": 8,
                 "x": 8,
-                "y": 105
+                "y": 113
             },
             "id": 13,
             "options": {
@@ -1329,11 +1546,11 @@
                         "max",
                         "lastNotNull"
                     ],
-                    "displayMode": "list",
+                    "displayMode": "table",
                     "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "targets": [
@@ -1406,7 +1623,7 @@
                 "h": 7,
                 "w": 8,
                 "x": 16,
-                "y": 105
+                "y": 113
             },
             "id": 14,
             "options": {
@@ -1416,11 +1633,11 @@
                         "max",
                         "lastNotNull"
                     ],
-                    "displayMode": "list",
+                    "displayMode": "table",
                     "placement": "bottom"
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "multi"
                 }
             },
             "targets": [
@@ -1445,12 +1662,12 @@
         "list": []
     },
     "time": {
-        "from": "now-1h",
+        "from": "now-24h",
         "to": "now"
     },
     "timepicker": {},
     "timezone": "",
     "title": "Home Power Consumption",
     "uid": "29ricRc7k",
-    "version": 12
+    "version": 20
 }
