@@ -41,4 +41,4 @@ This will print device details which will include device localkey. copy these ke
 Grafana Dashboard Screenshot
 
 <img width="1379" alt="Screenshot 2021-11-17 at 1 37 20 PM" src="https://user-images.githubusercontent.com/12495994/142160363-ff5ec516-1373-48a1-beb3-3fa10078f2f8.png">
-<img width="1440" alt="Screenshot 2021-11-17 at 1 36 39 PM" src="https://user-images.githubusercontent.com/12495994/142160378-8b61bf7a-7165-4346-9f67-9666d6988484.png">
+<img width="1440" alt="Screenshot 2021-11-17 at 1 56 25 PM" src="https://user-images.githubusercontent.com/12495994/142163146-923ad822-122a-4d9c-92f8-ff2436abd9da.png">
