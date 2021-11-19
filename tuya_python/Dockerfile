@@ -6,9 +6,9 @@ COPY tuya.py /pythonbin
 
 COPY entrypoint.sh /pythonbin
 
-RUN pip3 install tinytuya
+COPY requirements.txt /pythonbin
 
-RUN pip3 install prometheus-client
+RUN pip3 install -r /pythonbin/requirements.txt
 
 EXPOSE 9185
 

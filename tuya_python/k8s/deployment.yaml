@@ -35,7 +35,7 @@ spec:
         name: smartlife
         volumeMounts:
         - name: config-volume
-          mountPath: /etc/config
+          mountPath: /pythonbin
         ports:
         - containerPort: 9185
         resources: 
