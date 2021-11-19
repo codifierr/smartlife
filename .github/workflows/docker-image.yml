@@ -30,7 +30,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     -
       name: Build and push
-      run: cd tuya_python && docker build . --file Dockerfile --tag ssingh3339/smartlife:$(date +%s)
+      uses: docker/build-push-action@v2
       with:
         context: .
         platforms: linux/arm64,x86-64
