@@ -2,6 +2,8 @@ FROM pypy:latest
 
 RUN mkdir /pythonbin/
 
+RUN mkdir /tmp/config
+
 COPY tuya.py /pythonbin
 
 COPY entrypoint.sh /pythonbin

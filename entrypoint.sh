@@ -1,3 +1,2 @@
 pwd
 python tuya.py
-
