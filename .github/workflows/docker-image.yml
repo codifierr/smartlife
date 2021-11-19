@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file tuya_python/Dockerfile --tag ssingh3339/smartlife:$(date +%s)
+      run: cd tuya_python && docker build . --file Dockerfile --tag ssingh3339/smartlife:$(date +%s)
