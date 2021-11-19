@@ -14,7 +14,7 @@ Build go main module by (go build main.go) and run as below
 This will print device details which will include device localkey. copy these keys with device id for use in tuya prometheus python module.
 
 ## Tuya python
-2.) In Tuya python module create device_configs.yaml. A sample is available here https://github.com/codifierr/smartlife/blob/master/tuya_python/device_configs.yaml
+2.) In Tuya python module create device_configs.yaml. A sample is available here https://github.com/codifierr/smartlife/blob/master/device_configs.yaml
   
   Below are the key details required for every module you want to monitor. Device name you can give based on usecase that smart device is solving. In your router assign these devices a static address so that any restart should not cause invalid ip's and these devices always get same ip's from the router
 ```yaml
@@ -46,6 +46,22 @@ python3 tuya.py
 ```
 ## Grafana config
 4.) Import grafana dashboard in your grafana UI available at this location https://github.com/codifierr/smartlife/blob/master/Grafana_dash/tuya.json
+
+## Kubernetes deployment
+Create a config map with name tuya-device-config from file device_configs.yaml. you can use below command to do that
+```shell
+kubectl create cm tuya-device-config --from-file device_configs.yaml
+```
+or 
+
+Update https://github.com/codifierr/smartlife/blob/master/k8s/config.yaml with your device information and run below
+```shell
+kubectl apply -f config.yaml
+```
+Once config map is deployed then run below command to deploy app
+```shell
+kubectl apply -f https://raw.githubusercontent.com/codifierr/smartlife/master/k8s/deployment.yaml
+```
 
 ## Grafana Dashboard Screenshot
 
