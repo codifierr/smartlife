@@ -1,4 +1,3 @@
 pwd
-echo "test entrypoint"
+python tuya.py
 
-sleep 3600
