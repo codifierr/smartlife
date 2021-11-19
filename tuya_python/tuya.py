@@ -42,7 +42,7 @@ class Collector:
 def main(port=9185):
     # url http://localhost:9185
     device_configs = None
-    with open("device_configs.yaml", "r") as stream:
+    with open("/etc/config/device_configs.yaml", "r") as stream:
         try:
             device_configs = (yaml.safe_load(stream))
         except yaml.YAMLError as exc:

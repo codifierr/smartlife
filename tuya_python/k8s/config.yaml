@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  device_configs.yaml: |+
+    ---
+    - device_name: TV Socket
+      device_id: device_id
+      location: Living Room
+      ip: 192.168.1.1
+      local_key: local_key
+    - device_name: AC Socket
+      device_id: device_id
+      location: Master Bedroom
+      ip: 192.168.1.2
+      local_key: local_key
+
+kind: ConfigMap
+metadata:
+  name: tuya-device-config
+  namespace: default

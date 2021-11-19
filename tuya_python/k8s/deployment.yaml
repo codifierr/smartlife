@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: smartlife
+  labels:
+    app: smartlife
+    service: smartlife
+spec:
+  ports:
+  - name: http-smartlife
+    port: 9185
+    targetPort: 9185
+  selector:
+    app: smartlife
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smartlife
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smartlife
+      version: v0.0.1
+  template:
+    metadata:
+      labels:
+        app: smartlife
+        version: v0.0.1
+    spec:
+      containers:
+      - image: ssingh3339/smartlife:v0.0.1
+        imagePullPolicy: IfNotPresent
+        name: smartlife
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+        ports:
+        - containerPort: 9185
+        resources: 
+            limits: 
+              cpu: "2"
+              memory: 300Mi
+            requests: 
+              cpu: "1"
+              memory: 100Mi
+      volumes:
+      - name: config-volume
+        configMap:
+          # Provide the name of the ConfigMap containing the files you want
+          # to add to the container
+          name: tuya-device-config
