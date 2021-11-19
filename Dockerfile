@@ -12,4 +12,8 @@ EXPOSE 9185
 
 RUN pwd
 
+WORKDIR /pythonbin
+
+RUN pwd
+
 CMD [ "python", "/pythonbin/tuya.py" ]
