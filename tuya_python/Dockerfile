@@ -12,5 +12,6 @@ RUN pip3 install -r /pythonbin/requirements.txt
 
 EXPOSE 9185
 
-ENTRYPOINT ["/pythonbin/entrypoint.sh"]
+WORKDIR /pythonbin
 
+ENTRYPOINT ["/pythonbin/entrypoint.sh"]
