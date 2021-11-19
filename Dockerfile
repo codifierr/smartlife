@@ -16,9 +16,9 @@ RUN pwd
 
 WORKDIR /pythonbin
 
-RUN pwd
+RUN ls
 
 # ENTRYPOINT ["sh", "-c", "tail -f /dev/null"]
 # ENTRYPOINT ["/pythonbin/entrypoint.sh"]
 
-CMD [ "python", "tuya.py" ]
+CMD [ "python", "/pythonbin/tuya.py" ]
