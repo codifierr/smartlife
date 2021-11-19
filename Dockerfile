@@ -16,4 +16,6 @@ WORKDIR /pythonbin
 
 RUN pwd
 
-CMD [ "python", "/pythonbin/tuya.py" ]
+CMD ["sh", "-c", "tail -f /dev/null"]
+
+# CMD [ "python", "/pythonbin/tuya.py" ]
