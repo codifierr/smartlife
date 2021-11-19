@@ -22,12 +22,12 @@ spec:
   selector:
     matchLabels:
       app: smartlife
-      version: latest
+      version: v1
   template:
     metadata:
       labels:
         app: smartlife
-        version: latest
+        version: v1
     spec:
       containers:
       - image: ssingh3339/smartlife:latest
