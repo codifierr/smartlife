@@ -19,10 +19,12 @@
         ]
     },
     "editable": true,
+    "fiscalYearStartMonth": 0,
     "gnetId": null,
     "graphTooltip": 0,
-    "id": 20,
+    "id": 8,
     "links": [],
+    "liveNow": false,
     "panels": [
         {
             "collapsed": false,
@@ -92,6 +94,7 @@
             },
             "id": 22,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -100,11 +103,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -116,7 +118,7 @@
             ],
             "title": "Current Voltage",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -161,7 +163,7 @@
                 "text": {},
                 "textMode": "auto"
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -294,6 +296,7 @@
             },
             "id": 18,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -302,11 +305,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -318,7 +320,7 @@
             ],
             "title": "Current Power",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -363,7 +365,7 @@
                 "text": {},
                 "textMode": "auto"
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -503,6 +505,7 @@
             },
             "id": 25,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -511,11 +514,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -527,7 +529,7 @@
             ],
             "title": "Current Amp",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -572,7 +574,7 @@
                 "text": {},
                 "textMode": "auto"
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -726,6 +728,7 @@
             },
             "id": 31,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -734,11 +737,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -750,7 +752,7 @@
             ],
             "title": "Current Power",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -806,6 +808,7 @@
             },
             "id": 33,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -814,11 +817,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -830,7 +832,7 @@
             ],
             "title": "Current Voltage",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -847,6 +849,26 @@
                             {
                                 "color": "green",
                                 "value": null
+                            },
+                            {
+                                "color": "purple",
+                                "value": 2
+                            },
+                            {
+                                "color": "blue",
+                                "value": 5
+                            },
+                            {
+                                "color": "yellow",
+                                "value": 10
+                            },
+                            {
+                                "color": "orange",
+                                "value": 15
+                            },
+                            {
+                                "color": "red",
+                                "value": 21
                             }
                         ]
                     },
@@ -862,6 +884,7 @@
             },
             "id": 29,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -870,11 +893,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -886,7 +908,7 @@
             ],
             "title": "Current Amp",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -1199,6 +1221,7 @@
             },
             "id": 30,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -1207,11 +1230,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -1223,7 +1245,7 @@
             ],
             "title": "Current Power",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -1279,6 +1301,7 @@
             },
             "id": 28,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -1287,11 +1310,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -1303,7 +1325,7 @@
             ],
             "title": "Current Voltage",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -1320,6 +1342,26 @@
                             {
                                 "color": "green",
                                 "value": null
+                            },
+                            {
+                                "color": "purple",
+                                "value": 2
+                            },
+                            {
+                                "color": "blue",
+                                "value": 5
+                            },
+                            {
+                                "color": "yellow",
+                                "value": 10
+                            },
+                            {
+                                "color": "orange",
+                                "value": 15
+                            },
+                            {
+                                "color": "red",
+                                "value": 21
                             }
                         ]
                     },
@@ -1333,8 +1375,9 @@
                 "x": 16,
                 "y": 91
             },
-            "id": 32,
+            "id": 37,
             "options": {
+                "displayMode": "gradient",
                 "orientation": "auto",
                 "reduceOptions": {
                     "calcs": [
@@ -1343,11 +1386,10 @@
                     "fields": "",
                     "values": false
                 },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
+                "showUnfilled": false,
                 "text": {}
             },
-            "pluginVersion": "8.1.1",
+            "pluginVersion": "8.2.3",
             "targets": [
                 {
                     "exemplar": true,
@@ -1359,7 +1401,7 @@
             ],
             "title": "Current Amp",
             "transparent": true,
-            "type": "gauge"
+            "type": "bargauge"
         },
         {
             "datasource": null,
@@ -1629,20 +1671,20 @@
             "type": "timeseries"
         }
     ],
-    "refresh": "5s",
-    "schemaVersion": 30,
+    "refresh": "10s",
+    "schemaVersion": 31,
     "style": "dark",
     "tags": [],
     "templating": {
         "list": []
     },
     "time": {
-        "from": "now-3h",
+        "from": "now-30m",
         "to": "now"
     },
     "timepicker": {},
     "timezone": "",
     "title": "Home Power Consumption",
     "uid": "29ricRc7k",
-    "version": 24
+    "version": 5
 }
