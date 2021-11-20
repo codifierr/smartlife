@@ -28,6 +28,10 @@ spec:
       labels:
         app: smartlife
         version: v0.0.1
+      annotations:
+        prometheus.io.scrape: "true"
+        prometheus.io.port: "9185"
+        prometheus.io.path: "/metrics"
     spec:
       containers:
       - image: ssingh3339/smartlife:latest
