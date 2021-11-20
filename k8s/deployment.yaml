@@ -40,11 +40,11 @@ spec:
         - containerPort: 9185
         resources: 
             limits: 
-              cpu: "2"
-              memory: 300Mi
-            requests: 
-              cpu: "1"
+              cpu: ".5"
               memory: 100Mi
+            requests: 
+              cpu: ".25"
+              memory: 50Mi
       volumes:
       - name: config-volume
         configMap:
