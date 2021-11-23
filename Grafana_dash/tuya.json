@@ -744,7 +744,7 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "tuya_consumption_power{location=\"Master Bedroom\"}",
+                    "expr": "tuya_consumption_power{location=\"Invertor Room\"}",
                     "interval": "",
                     "legendFormat": "{{device_name}}",
                     "refId": "A"
@@ -824,7 +824,7 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "tuya_consumption_voltage{location=\"Master Bedroom\"}",
+                    "expr": "tuya_consumption_voltage{location=\"Invertor Room\"}",
                     "interval": "",
                     "legendFormat": "{{device_name}}",
                     "refId": "A"
@@ -900,7 +900,7 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "tuya_consumption_current{location=\"Master Bedroom\"}",
+                    "expr": "tuya_consumption_current{location=\"Invertor Room\"}",
                     "interval": "",
                     "legendFormat": "{{device_name}}",
                     "refId": "A"
@@ -992,7 +992,7 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "tuya_consumption_power{location=\"Master Bedroom\"}",
+                    "expr": "tuya_consumption_power{location=\"Invertor Room\"}",
                     "format": "time_series",
                     "interval": "",
                     "legendFormat": "{{device_name}}",
@@ -1080,7 +1080,7 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "tuya_consumption_voltage{location=\"Master Bedroom\"}",
+                    "expr": "tuya_consumption_voltage{location=\"Invertor Room\"}",
                     "interval": "",
                     "legendFormat": "{{device_name}}",
                     "refId": "A"
@@ -1167,7 +1167,7 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "tuya_consumption_current{location=\"Master Bedroom\"}",
+                    "expr": "tuya_consumption_current{location=\"Invertor Room\"}",
                     "interval": "",
                     "legendFormat": "{{device_name}}",
                     "refId": "A"
@@ -1188,7 +1188,7 @@
             },
             "id": 6,
             "panels": [],
-            "title": "Living Room",
+            "title": "Entertainment Unit",
             "type": "row"
         },
         {
@@ -1671,7 +1671,7 @@
             "type": "timeseries"
         }
     ],
-    "refresh": "10s",
+    "refresh": "30s",
     "schemaVersion": 31,
     "style": "dark",
     "tags": [],
@@ -1679,12 +1679,12 @@
         "list": []
     },
     "time": {
-        "from": "now-30m",
+        "from": "now-1h",
         "to": "now"
     },
     "timepicker": {},
     "timezone": "",
     "title": "Home Power Consumption",
     "uid": "29ricRc7k",
-    "version": 5
+    "version": 9
 }
