@@ -20,19 +20,23 @@ class Collector:
             "tuya_consumption_voltage", "Voltage in volts.", labels=["device_name", "device_id", "location"]
         )
         for config in self.configs:
-            d = tinytuya.OutletDevice(
-                config['device_id'], config['ip'], config['local_key'])
-            d.set_version(3.3)
-            d.updatedps([18, 19, 20])
-            data = d.status()
-            if data.get('dps'):
-                current_gauge.add_metric(
-                    [config['device_name'], config['device_id'], config['location']], float(data["dps"]["18"]) / 1000.0)
-                power_gauge.add_metric(
-                    [config['device_name'], config['device_id'], config['location']], float(data["dps"]["19"]) / 10.0)
-                voltage_gauge.add_metric(
-                    [config['device_name'], config['device_id'], config['location']], float(data["dps"]["20"]) / 10.0)
-            else:
+            try:
+                d = tinytuya.OutletDevice(
+                    config['device_id'], config['ip'], config['local_key'])
+                d.set_version(3.3)
+                d.updatedps([18, 19, 20])
+                data = d.status()
+                if data.get('dps'):
+                    current_gauge.add_metric(
+                        [config['device_name'], config['device_id'], config['location']], float(data["dps"]["18"]) / 1000.0)
+                    power_gauge.add_metric(
+                        [config['device_name'], config['device_id'], config['location']], float(data["dps"]["19"]) / 10.0)
+                    voltage_gauge.add_metric(
+                        [config['device_name'], config['device_id'], config['location']], float(data["dps"]["20"]) / 10.0)
+                else:
+                    continue
+            except Exception as e:
+                print(e)
                 continue
         yield current_gauge
         yield power_gauge
