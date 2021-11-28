@@ -206,7 +206,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -412,7 +412,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -621,7 +621,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -940,7 +940,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -1029,7 +1029,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -1116,7 +1116,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -1433,7 +1433,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -1522,7 +1522,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -1609,7 +1609,7 @@
                             "type": "linear"
                         },
                         "showPoints": "auto",
-                        "spanNulls": 120000,
+                        "spanNulls": 600000,
                         "stacking": {
                             "group": "A",
                             "mode": "none"
@@ -1686,5 +1686,5 @@
     "timezone": "",
     "title": "Home Power Consumption",
     "uid": "29ricRc7k",
-    "version": 9
+    "version": 11
 }
