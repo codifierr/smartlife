@@ -64,6 +64,5 @@ kubectl apply -f https://raw.githubusercontent.com/codifierr/smartlife/master/k8
 ```
 
 ## Grafana Dashboard Screenshot
+<img width="1377" alt="Screenshot 2021-12-09 at 5 57 05 PM" src="https://user-images.githubusercontent.com/12495994/145396349-f5ea7be2-e04b-4d97-a1ee-59b1afaa04f8.png">
 
-<img width="1379" alt="Screenshot 2021-11-17 at 1 37 20 PM" src="https://user-images.githubusercontent.com/12495994/142160363-ff5ec516-1373-48a1-beb3-3fa10078f2f8.png">
-<img width="1440" alt="Screenshot 2021-11-17 at 1 56 25 PM" src="https://user-images.githubusercontent.com/12495994/142163146-923ad822-122a-4d9c-92f8-ff2436abd9da.png">
